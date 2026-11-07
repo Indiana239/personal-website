@@ -7,7 +7,9 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const links = [
-  { href: "/work/", label: "Work" },
+  { href: "/design/", label: "Design" },
+  { href: "/seo/", label: "SEO" },
+  { href: "/development/", label: "Development" },
   { href: "/about/", label: "About" },
   { href: "/contact/", label: "Contact" },
 ];
@@ -26,7 +28,8 @@ export function SiteHeader() {
 
         <nav className="desktop-nav" aria-label="Main navigation">
           {links.map((link) => {
-            const active = pathname === link.href || pathname.startsWith(link.href);
+            const routeRoot = link.href === "/" ? "/" : link.href.slice(0, -1);
+            const active = pathname === routeRoot || pathname.startsWith(`${routeRoot}/`);
             return (
               <Link key={link.href} href={link.href} className={`nav-link${active ? " is-active" : ""}`}>
                 {link.label}

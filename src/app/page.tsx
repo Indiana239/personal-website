@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDown, ArrowRight, ArrowUpRight, MoveUpRight } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
 import { HeroArt } from "@/components/home/hero-art";
 import { ProjectCard } from "@/components/project-card";
 import { DisciplineCard } from "@/components/discipline-card";
@@ -55,11 +55,11 @@ export default function HomePage() {
         </div>
         <div className="section-action-row">
           <p>More context, process, and thinking behind each project.</p>
-          <Link href="/work/" className="button button--outline">Explore all work <MoveUpRight size={16} /></Link>
+          <Link href="#disciplines" className="button button--outline">Explore by discipline <ArrowUpRight size={16} /></Link>
         </div>
       </section>
 
-      <section className="disciplines-section">
+      <section id="disciplines" className="disciplines-section scroll-mt-24">
         <div className="page-container section-block">
           <SectionHeading
             eyebrow="THREE CONNECTED DISCIPLINES"

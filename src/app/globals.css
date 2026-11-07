@@ -397,10 +397,13 @@ body {
 .about-strip__index { font-size: 10px; }
 .about-strip__content h2 { font-size: clamp(42px, 5.5vw, 74px); }
 .about-strip__description { font-size: 16px; line-height: 1.85; }
-.about-strip__stamp { transition: transform 650ms cubic-bezier(.2,.8,.2,1), border-color 300ms ease, box-shadow 300ms ease; }
+.about-strip__stamp { transform-origin: center; transition: transform 420ms cubic-bezier(.2,.8,.2,1), border-color 240ms ease, box-shadow 240ms ease, background-color 240ms ease; }
 .about-strip__stamp span { font-size: 9px; }
-.about-strip__stamp:hover,
-.about-strip:hover .about-strip__stamp { transform: rotate(-7deg) scale(1.07); border-color: var(--coral); box-shadow: 0 0 0 9px color-mix(in srgb, var(--coral) 9%, transparent); }
+@media (hover: hover) and (pointer: fine) {
+  /* Trigger the stamp only when the pointer is actually over it.
+     Avoid parent hover so moving across the whole About section does not keep it activated. */
+  .about-strip__stamp:hover { transform: rotate(-7deg) scale(1.07); border-color: var(--coral); box-shadow: 0 0 0 9px color-mix(in srgb, var(--coral) 9%, transparent); }
+}
 .about-strip__content h2 em { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--coral) 35%, transparent); text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
 
 /* Contact callout interaction */
@@ -543,4 +546,83 @@ body {
 @media (max-width: 420px) {
   .brand__name { font-size: 11px; }
   .hero-footnote { font-size: 9px; }
+}
+
+
+/* Mobile contact CTA: keep copy inside the card at narrow viewport widths. */
+@media (max-width: 700px) {
+  .contact-cta__inner {
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+    width: 100%;
+    gap: 22px;
+    padding-inline: clamp(18px, 5.5vw, 25px);
+  }
+
+  .contact-cta__graphic {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow: hidden;
+    font-size: clamp(42px, 13vw, 72px);
+  }
+
+  .contact-cta__graphic i {
+    top: -2px;
+    right: 12%;
+  }
+
+  .contact-cta__copy {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .contact-cta__copy .eyebrow {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: clamp(9px, 2.7vw, 10px);
+    letter-spacing: 0.1em;
+    line-height: 1.55;
+  }
+
+  .contact-cta__copy h2 {
+    max-width: 100%;
+    font-size: clamp(38px, 10vw, 54px);
+    letter-spacing: -0.065em;
+    overflow-wrap: break-word;
+  }
+
+  .contact-cta__copy > p:not(.eyebrow) {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-cta__inner {
+    padding: 28px 18px 34px;
+  }
+
+  .contact-cta__graphic {
+    gap: 8px;
+    font-size: clamp(42px, 13vw, 55px);
+  }
+
+  .contact-cta__graphic i {
+    right: 8%;
+    font-size: 22px;
+  }
+
+  .contact-cta__copy .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .contact-cta__copy h2 {
+    font-size: clamp(36px, 10vw, 44px);
+    letter-spacing: -0.06em;
+  }
 }

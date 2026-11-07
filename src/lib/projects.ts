@@ -1,6 +1,12 @@
 export type Discipline = "Design" | "SEO" | "Development";
 export type ProjectVisual = "dineease" | "packaging" | "seo" | "code";
 
+export const disciplinePaths: Record<Discipline, string> = {
+  Design: "/design",
+  SEO: "/seo",
+  Development: "/development",
+};
+
 export type Project = {
   slug: string;
   title: string;

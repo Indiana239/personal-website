@@ -10,7 +10,9 @@ export function SiteFooter() {
           <p className="footer-note">Design-minded. Strategy-led. Technically curious.</p>
         </div>
         <div className="footer-links">
-          <Link href="/work/">Work</Link>
+          <Link href="/design/">Design</Link>
+          <Link href="/seo/">SEO</Link>
+          <Link href="/development/">Development</Link>
           <Link href="/about/">About</Link>
           <Link href="/contact/">Contact <ArrowUpRight size={13} /></Link>
           <a href="https://www.linkedin.com/in/indiradiana/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={13} /></a>

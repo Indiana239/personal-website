@@ -20,7 +20,7 @@ export default function ContactPage() {
           <span>THE BEST PLACE TO FIND ME</span>
           <a href="https://www.linkedin.com/in/indiradiana/" target="_blank" rel="noreferrer"><span><Linkedin size={17} /> LinkedIn</span><ArrowUpRight size={18} /></a>
           <p className="text-xs leading-7 text-[var(--muted)]">Add your preferred professional email address and any additional profile links here before publishing this page.</p>
-          <Link href="/work/" className="text-link">See selected work <ArrowUpRight size={15} /></Link>
+          <Link href="/#selected-work" className="text-link">See selected work <ArrowUpRight size={15} /></Link>
         </div>
       </section>
     </main>

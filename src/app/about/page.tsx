@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowDownRight, ArrowUpRight, Sparkles } from "lucide-react";
-import { CareerTimeline } from "./career-timeline";
+import { CareerTimeline } from "@/components/about/career-timeline";
 
 export const metadata: Metadata = {
   title: "About",
@@ -54,7 +54,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="mt-9 flex flex-wrap items-center gap-3">
-            <Link href="/work/" className="button button--primary">
+            <Link href="/#selected-work" className="button button--primary">
               Explore my work <ArrowUpRight size={16} />
             </Link>
             <a href="#career-journey" className="button button--outline">
