@@ -1,9 +1,25 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { DineEaseCaseStudy } from "@/components/dineease-case-study";
+import { TitikPagiCaseStudy } from "@/components/titik-pagi-case-study";
+import { SelaSkinCaseStudy } from "@/components/sela-skin-case-study";
 import { ProjectArtwork } from "@/components/project-artwork";
 import { disciplinePaths, type Project } from "@/lib/projects";
 
 export function ProjectDetailPage({ project }: { project: Project }) {
+  // Dedicated editorial case studies for selected design projects.
+  if (project.slug === "dineease" && project.discipline === "Design") {
+    return <DineEaseCaseStudy project={project} />;
+  }
+
+  if (project.slug === "titik-pagi" && project.discipline === "Design") {
+    return <TitikPagiCaseStudy project={project} />;
+  }
+
+  if (project.slug === "sela-skin" && project.discipline === "Design") {
+    return <SelaSkinCaseStudy project={project} />;
+  }
+
   const disciplinePath = disciplinePaths[project.discipline];
   const disciplineLabel =
     project.discipline === "Design"
@@ -37,7 +53,7 @@ export function ProjectDetailPage({ project }: { project: Project }) {
         <div><span>DISCIPLINE</span><b>{project.discipline}</b></div>
         <div><span>MY ROLE</span><b>{project.role}</b></div>
         <div><span>PROJECT STATUS</span><b>{project.status}</b></div>
-        <div><span>TOOLS & METHODS</span><b>{project.tools.join(" · ")}</b></div>
+        <div><span>TOOLS &amp; REFERENCES</span><b>{project.tools.join(" · ")}</b></div>
       </div>
 
       <section className="case-content">

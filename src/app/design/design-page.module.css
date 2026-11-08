@@ -1,0 +1,1500 @@
+.page {
+  padding-bottom: clamp(76px, 10vw, 132px);
+}
+
+.topline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.breadcrumbLink {
+  transition: color 180ms ease;
+}
+
+.breadcrumbLink:hover {
+  color: var(--coral);
+}
+
+.pageIndex {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 76px);
+  min-height: 620px;
+  padding-block: clamp(64px, 8vw, 108px) 94px;
+}
+
+.heroCopy {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.heroTitle {
+  max-width: 760px;
+  margin: 22px 0 24px;
+  font-size: clamp(58px, 7.5vw, 104px);
+  font-weight: 600;
+  letter-spacing: -0.085em;
+  line-height: 0.94;
+}
+
+.heroTitle em,
+.sectionTitle em,
+.ctaCopy h2 em {
+  color: var(--coral);
+  font-family: var(--font-dm-serif), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.065em;
+}
+
+.heroDescription {
+  max-width: 540px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.primaryLink,
+.ctaLink {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 19px;
+  border-radius: 999px;
+  background: var(--foreground);
+  color: var(--background);
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 220ms ease, background 220ms ease, color 220ms ease;
+}
+
+.primaryLink:hover,
+.ctaLink:hover {
+  transform: translateY(-3px);
+  background: var(--accent);
+  color: #191b16;
+}
+
+.primaryLink svg {
+  transition: transform 220ms ease;
+}
+
+.primaryLink:hover svg {
+  transform: translateY(3px);
+}
+
+.heroNote {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.heroVisual {
+  position: relative;
+  display: grid;
+  min-height: 440px;
+  place-items: center;
+  isolation: isolate;
+}
+
+.heroVisualTopline,
+.heroVisualBottomline {
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.heroVisualTopline {
+  top: 5px;
+}
+
+.heroVisualBottomline {
+  bottom: 3px;
+}
+
+.visualOrbit,
+.visualOrbitInner {
+  position: absolute;
+  width: min(88%, 390px);
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--coral) 45%, transparent);
+  border-radius: 50%;
+  transform: rotate(-20deg) scaleY(0.72);
+  transition: transform 700ms cubic-bezier(.2,.8,.2,1), border-color 400ms ease;
+}
+
+.visualOrbitInner {
+  width: min(68%, 300px);
+  border-color: color-mix(in srgb, var(--foreground) 25%, transparent);
+  transform: rotate(34deg) scaleY(0.82);
+}
+
+.heroVisual:hover .visualOrbit {
+  transform: rotate(-9deg) scale(1.05, 0.78);
+  border-color: var(--coral);
+}
+
+.heroVisual:hover .visualOrbitInner {
+  transform: rotate(48deg) scale(0.94, 0.78);
+}
+
+.visualSheet {
+  position: absolute;
+  display: flex;
+  width: min(55%, 245px);
+  min-height: 300px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 19px;
+  border: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
+  box-shadow: 0 24px 65px rgba(20, 22, 18, 0.13);
+  transition: transform 650ms cubic-bezier(.2,.8,.2,1), box-shadow 450ms ease;
+}
+
+.visualSheetOne {
+  z-index: 2;
+  background: var(--accent);
+  color: #1b1d17;
+  transform: translate(-29%, 9%) rotate(-9deg);
+}
+
+.visualSheetTwo {
+  z-index: 1;
+  background: var(--surface-raised);
+  color: var(--foreground);
+  transform: translate(26%, -4%) rotate(8deg);
+}
+
+.heroVisual:hover .visualSheetOne {
+  transform: translate(-34%, 5%) rotate(-13deg);
+  box-shadow: 0 32px 75px rgba(20, 22, 18, 0.18);
+}
+
+.heroVisual:hover .visualSheetTwo {
+  transform: translate(31%, -8%) rotate(12deg);
+}
+
+.sheetLabel,
+.sheetFoot {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.sheetSerif {
+  font-family: var(--font-dm-serif), Georgia, serif;
+  font-size: clamp(37px, 4vw, 56px);
+  font-style: italic;
+  letter-spacing: -0.07em;
+  line-height: 0.84;
+}
+
+.sheetSerif i {
+  color: #e76d52;
+  font-weight: 400;
+}
+
+.sheetGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  width: 100%;
+  margin-block: auto;
+  padding-block: 25px;
+}
+
+.sheetGrid i {
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.sheetGrid i:nth-child(2),
+.sheetGrid i:nth-child(4) {
+  background: var(--coral);
+}
+
+.sheetGrid i:nth-child(5) {
+  background: var(--accent);
+}
+
+.visualStamp {
+  position: absolute;
+  z-index: 3;
+  right: 3%;
+  bottom: 16%;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: var(--soft-shadow);
+  text-align: center;
+  transform: rotate(8deg);
+  transition: transform 400ms ease, border-color 300ms ease;
+}
+
+.visualStamp span {
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+}
+
+.heroVisual:hover .visualStamp {
+  border-color: var(--coral);
+  transform: rotate(-5deg) scale(1.06);
+}
+
+.heroCapabilities {
+  position: absolute;
+  right: 0;
+  bottom: 28px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 19px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.heroCapabilities i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.projectsSection,
+.practiceSection,
+.processSection {
+  padding-top: clamp(76px, 9vw, 118px);
+  border-top: 1px solid var(--border);
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 36px;
+  margin-bottom: 42px;
+}
+
+.sectionTitle {
+  margin: 17px 0 13px;
+  font-size: clamp(43px, 5.7vw, 72px);
+  font-weight: 550;
+  letter-spacing: -0.075em;
+  line-height: 0.98;
+}
+
+.sectionIntro {
+  max-width: 590px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.projectCount {
+  flex: 0 0 auto;
+  padding-bottom: 5px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.featuredProject,
+.supportingProject {
+  display: block;
+  min-width: 0;
+  color: inherit;
+}
+
+.featuredArtwork,
+.supportingArtwork {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.featuredArtwork {
+  min-height: clamp(360px, 48vw, 590px);
+}
+
+.featuredArtwork :global(.project-art),
+.supportingArtwork :global(.project-art) {
+  transition: transform 850ms cubic-bezier(.2,.8,.2,1), filter 500ms ease;
+}
+
+.featuredProject:hover .featuredArtwork :global(.project-art),
+.supportingProject:hover .supportingArtwork :global(.project-art) {
+  transform: scale(1.055) rotate(0.35deg);
+  filter: saturate(1.06);
+}
+
+.artworkIndex,
+.artworkCaption {
+  position: absolute;
+  z-index: 5;
+  color: rgba(25, 27, 23, 0.72);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  pointer-events: none;
+}
+
+.artworkIndex {
+  top: 19px;
+  left: 20px;
+}
+
+.artworkCaption {
+  right: 20px;
+  bottom: 19px;
+}
+
+.artworkOpen {
+  position: absolute;
+  z-index: 5;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid rgba(25, 27, 23, 0.25);
+  border-radius: 50%;
+  background: rgba(255, 254, 250, 0.76);
+  color: #191b17;
+  backdrop-filter: blur(12px);
+  transition: transform 250ms ease, background 250ms ease;
+}
+
+.featuredProject:hover .artworkOpen,
+.supportingProject:hover .artworkOpen {
+  transform: rotate(45deg);
+  background: var(--accent);
+}
+
+.featuredMeta,
+.supportingMeta {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 22px;
+}
+
+.projectText {
+  max-width: 720px;
+}
+
+.projectEyebrow {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.projectEyebrow i {
+  padding-inline: 4px;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.featuredMeta h3,
+.supportingMeta h3 {
+  margin: 0;
+  font-size: clamp(31px, 4vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 1.05;
+}
+
+.featuredMeta h3 span,
+.supportingMeta h3 span {
+  color: var(--coral);
+}
+
+.projectDescription {
+  max-width: 660px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.projectAction {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 800;
+  transition: gap 220ms ease, border-color 220ms ease, color 220ms ease;
+}
+
+.featuredProject:hover .projectAction {
+  gap: 16px;
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+.supportingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 64px;
+}
+
+.supportingArtwork {
+  min-height: clamp(260px, 30vw, 380px);
+}
+
+.supportingArtwork :global(.project-art) {
+  transform: scale(0.93);
+}
+
+.supportingMeta {
+  align-items: start;
+  padding-top: 18px;
+}
+
+.supportingMeta h3 {
+  font-size: clamp(25px, 3vw, 34px);
+}
+
+.supportingMeta .projectDescription {
+  font-size: 14px;
+}
+
+.supportingArrow {
+  flex: 0 0 auto;
+  margin-top: 7px;
+  transition: transform 220ms ease, color 220ms ease;
+}
+
+.supportingProject:hover .supportingArrow {
+  color: var(--coral);
+  transform: translate(3px, -3px);
+}
+
+.emptyProjects {
+  padding: 62px 24px;
+  border: 1px dashed var(--border);
+  text-align: center;
+}
+
+.emptyProjects > span {
+  color: var(--coral);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.emptyProjects h3 {
+  margin: 12px 0 7px;
+  font-family: var(--font-dm-serif), Georgia, serif;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.emptyProjects p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.practiceSection {
+  position: relative;
+  isolation: isolate;
+  margin-top: clamp(78px, 10vw, 130px);
+  padding-bottom: clamp(76px, 9vw, 118px);
+  background: transparent;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/* Full-bleed background without the 100vmax shadow that can widen the scroll area. */
+.practiceSection::before {
+  position: absolute;
+  z-index: -1;
+  inset-block: 0;
+  left: 50%;
+  width: 100vw;
+  max-width: 100vw;
+  transform: translateX(-50%);
+  border-block: 1px solid var(--border);
+  background: var(--surface);
+  content: "";
+  pointer-events: none;
+}
+
+.practiceAside {
+  max-width: 360px;
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.practiceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.practiceCard {
+  --practice-accent: var(--accent);
+  position: relative;
+  display: flex;
+  min-height: 340px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: clamp(20px, 2.5vw, 30px);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--background);
+  transition: transform 350ms cubic-bezier(.2,.8,.2,1), border-color 300ms ease, box-shadow 350ms ease;
+}
+
+.practiceCard::after {
+  position: absolute;
+  right: -50px;
+  bottom: 82px;
+  width: 165px;
+  height: 165px;
+  border: 1px solid color-mix(in srgb, var(--practice-accent) 65%, transparent);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  transition: transform 600ms cubic-bezier(.2,.8,.2,1);
+}
+
+.practiceCard:hover {
+  z-index: 1;
+  transform: translateY(-8px);
+  border-color: color-mix(in srgb, var(--practice-accent) 75%, var(--border));
+  box-shadow: var(--soft-shadow);
+}
+
+.practiceCard:hover::after {
+  transform: scale(1.28) translate(-9px, -7px);
+}
+
+.practiceCard_lime { --practice-accent: var(--accent); }
+.practiceCard_coral { --practice-accent: var(--coral); }
+.practiceCard_blue { --practice-accent: var(--blue); }
+
+.practiceCardTop,
+.practiceCardBottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.practiceCardTop {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+
+.practiceCardTop svg {
+  color: var(--foreground);
+  transition: transform 280ms ease, color 280ms ease;
+}
+
+.practiceCard:hover .practiceCardTop svg {
+  color: var(--practice-accent);
+  transform: rotate(-9deg) scale(1.12);
+}
+
+.practiceCardBody {
+  position: relative;
+  z-index: 1;
+  margin-block: 30px;
+}
+
+.practiceCardBody h3 {
+  max-width: 270px;
+  margin: 0;
+  font-size: clamp(27px, 2.7vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  line-height: 1.02;
+}
+
+.practiceCardBody p {
+  max-width: 310px;
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.practiceCardBottom {
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.practiceCardMark {
+  color: var(--foreground);
+  font-size: 20px;
+  transition: color 220ms ease, transform 220ms ease;
+}
+
+.practiceCard:hover .practiceCardMark {
+  color: var(--practice-accent);
+  transform: translate(3px, -3px);
+}
+
+.processSection {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(40px, 8vw, 110px);
+  padding-bottom: clamp(84px, 10vw, 130px);
+}
+
+.processIntro {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+
+.processIntro .sectionTitle {
+  max-width: 450px;
+}
+
+.processList {
+  border-top: 1px solid var(--border);
+}
+
+.processStep {
+  display: grid;
+  grid-template-columns: 45px minmax(0, 1fr) 25px;
+  align-items: start;
+  gap: 20px;
+  padding: 25px 5px;
+  border-bottom: 1px solid var(--border);
+  transition: padding 250ms ease, background 250ms ease;
+}
+
+.processStep:hover {
+  padding-inline: 13px;
+  background: var(--surface);
+}
+
+.processNumber {
+  padding-top: 5px;
+  color: var(--coral);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.processStepCopy h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.processStepCopy p {
+  max-width: 480px;
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.processArrow {
+  color: var(--muted);
+  font-size: 18px;
+  transition: color 220ms ease, transform 220ms ease;
+}
+
+.processStep:hover .processArrow {
+  color: var(--coral);
+  transform: translate(3px, -3px);
+}
+
+.ctaSection {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 360px;
+  align-items: center;
+  gap: 34px;
+  overflow: hidden;
+  padding: clamp(30px, 6vw, 70px);
+  border-radius: 9px;
+  background: #232923;
+  color: #f6f4ee;
+  isolation: isolate;
+}
+
+.ctaSection::before {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: radial-gradient(circle at 12% 20%, rgba(215, 243, 107, 0.2), transparent 34%), radial-gradient(circle at 90% 85%, rgba(255, 115, 87, 0.2), transparent 36%);
+  content: "";
+}
+
+.ctaGraphic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #d7f36b;
+  font-size: clamp(52px, 7vw, 94px);
+  font-weight: 800;
+  letter-spacing: -0.1em;
+  line-height: 0.78;
+  transition: transform 600ms cubic-bezier(.2,.8,.2,1);
+}
+
+.ctaGraphic em {
+  color: #ff8065;
+  font-family: var(--font-dm-serif), Georgia, serif;
+  font-size: 1.14em;
+  font-weight: 400;
+  letter-spacing: -0.08em;
+}
+
+.ctaPeriod {
+  color: #ff8065;
+}
+
+.ctaOrbit {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: clamp(180px, 23vw, 290px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(246, 244, 238, 0.19);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 800ms cubic-bezier(.2,.8,.2,1), border-color 500ms ease;
+}
+
+.ctaSection:hover .ctaGraphic {
+  transform: translateX(7px) rotate(-2deg);
+}
+
+.ctaSection:hover .ctaOrbit {
+  border-color: rgba(215, 243, 107, 0.45);
+  transform: translate(-50%, -50%) scale(1.13) rotate(12deg);
+}
+
+.ctaCopy {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  justify-self: end;
+}
+
+.ctaCopy :global(.eyebrow) {
+  color: #c1c7b9;
+}
+
+.ctaCopy h2 {
+  margin: 17px 0;
+  font-size: clamp(37px, 4.5vw, 58px);
+  font-weight: 550;
+  letter-spacing: -0.07em;
+  line-height: 0.99;
+}
+
+.ctaCopy h2 em {
+  color: #d7f36b;
+}
+
+.ctaCopy > p:not(.eyebrow) {
+  max-width: 410px;
+  margin: 0 0 24px;
+  color: #c1c7b9;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.ctaLink {
+  background: #d7f36b;
+  color: #191b16;
+}
+
+.ctaLink:hover {
+  background: #fffefa;
+  color: #191b16;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.85fr);
+    gap: 24px;
+  }
+
+  .heroTitle {
+    font-size: clamp(54px, 7vw, 78px);
+  }
+
+  .heroVisual {
+    min-height: 390px;
+  }
+
+  .visualSheet {
+    min-height: 265px;
+  }
+
+  .practiceCard {
+    min-height: 365px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-height: auto;
+    padding-top: 62px;
+    padding-bottom: 116px;
+  }
+
+  .heroTitle {
+    max-width: 650px;
+    font-size: clamp(54px, 11vw, 82px);
+  }
+
+  .heroDescription {
+    font-size: 16px;
+  }
+
+  .heroVisual {
+    width: min(100%, 520px);
+    min-height: 390px;
+    justify-self: center;
+  }
+
+  .heroCapabilities {
+    bottom: 27px;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 9px;
+  }
+
+  .sectionHeading {
+    align-items: start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .projectCount {
+    padding: 0;
+  }
+
+  .featuredArtwork {
+    min-height: 390px;
+  }
+
+  .featuredMeta {
+    align-items: start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .supportingGrid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    margin-top: 46px;
+  }
+
+  .supportingArtwork {
+    min-height: 340px;
+  }
+
+  .practiceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .practiceCard {
+    min-height: 275px;
+  }
+
+  .practiceCardBody h3 {
+    font-size: 34px;
+  }
+
+  .processSection {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .processIntro {
+    position: static;
+  }
+
+  .ctaSection {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .ctaGraphic {
+    font-size: clamp(58px, 13vw, 88px);
+  }
+
+  .ctaCopy {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 430px) {
+  .topline {
+    font-size: 10px;
+  }
+
+  .pageIndex {
+    font-size: 8px;
+  }
+
+  .hero {
+    padding-top: 48px;
+    padding-bottom: 110px;
+  }
+
+  .heroTitle {
+    font-size: clamp(49px, 12.2vw, 62px);
+  }
+
+  .heroActions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .heroNote {
+    font-size: 8px;
+  }
+
+  .heroVisual {
+    min-height: 330px;
+  }
+
+  .visualSheet {
+    width: min(57%, 205px);
+    min-height: 245px;
+    padding: 15px;
+  }
+
+  .visualStamp {
+    right: 0;
+    bottom: 12%;
+    width: 82px;
+    height: 82px;
+  }
+
+  .visualStamp span {
+    font-size: 7px;
+  }
+
+  .heroCapabilities {
+    gap: 7px;
+    font-size: 7px;
+    letter-spacing: 0.09em;
+  }
+
+  .heroCapabilities i {
+    width: 4px;
+    height: 4px;
+  }
+
+  .sectionTitle {
+    font-size: clamp(39px, 10vw, 54px);
+  }
+
+  .sectionIntro,
+  .practiceAside {
+    font-size: 15px;
+  }
+
+  .featuredArtwork {
+    min-height: 300px;
+  }
+
+  .supportingArtwork {
+    min-height: 280px;
+  }
+
+  .artworkIndex,
+  .artworkCaption {
+    font-size: 7px;
+  }
+
+  .artworkCaption {
+    max-width: 56%;
+    text-align: right;
+  }
+
+  .featuredMeta h3 {
+    font-size: 36px;
+  }
+
+  .projectDescription {
+    font-size: 15px;
+  }
+
+  .processStep {
+    grid-template-columns: 32px minmax(0, 1fr) 18px;
+    gap: 12px;
+    padding-block: 22px;
+  }
+
+  .processStepCopy h3 {
+    font-size: 21px;
+  }
+
+  .processStepCopy p {
+    font-size: 14px;
+  }
+
+  .ctaSection {
+    padding: 27px 22px;
+  }
+
+  .ctaCopy h2 {
+    font-size: 43px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryLink,
+  .ctaLink,
+  .visualOrbit,
+  .visualOrbitInner,
+  .visualSheet,
+  .visualStamp,
+  .featuredArtwork :global(.project-art),
+  .supportingArtwork :global(.project-art),
+  .artworkOpen,
+  .projectAction,
+  .practiceCard,
+  .practiceCard::after,
+  .practiceCardTop svg,
+  .practiceCardMark,
+  .processStep,
+  .processArrow,
+  .ctaGraphic,
+  .ctaOrbit {
+    transition: none !important;
+  }
+}
+
+
+/* Narrow-screen layout safeguards (tested against a 360px viewport target). */
+.page {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.page,
+.page * {
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .hero,
+  .projectsSection,
+  .practiceSection,
+  .processSection,
+  .ctaSection {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .heroCopy,
+  .heroVisual,
+  .sectionHeading > div,
+  .featuredMeta,
+  .supportingMeta,
+  .projectText,
+  .processIntro,
+  .processStepCopy,
+  .ctaCopy,
+  .ctaGraphic {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .heroVisual {
+    overflow: clip;
+  }
+
+  .featuredMeta,
+  .supportingMeta {
+    width: 100%;
+  }
+
+  .featuredMeta h3,
+  .supportingMeta h3,
+  .projectDescription,
+  .processStepCopy p,
+  .ctaCopy h2,
+  .ctaCopy > p:not(.eyebrow) {
+    overflow-wrap: anywhere;
+  }
+
+  .artworkIndex,
+  .artworkCaption {
+    max-width: calc(100% - 76px);
+  }
+
+  .practiceSection::before {
+    /* Keep the full-bleed band exactly within the viewport. */
+    width: 100vw;
+  }
+}
+
+@media (max-width: 430px) {
+  .topline {
+    flex-wrap: wrap;
+    row-gap: 5px;
+    padding-block: 12px;
+  }
+
+  .pageIndex {
+    white-space: nowrap;
+  }
+
+  .hero {
+    width: 100%;
+    padding-top: 44px;
+    padding-bottom: 108px;
+  }
+
+  .heroTitle {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(45px, 12vw, 52px);
+    letter-spacing: -0.09em;
+    overflow-wrap: normal;
+    text-wrap: pretty;
+  }
+
+  .heroDescription {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .heroActions {
+    width: 100%;
+    gap: 13px;
+  }
+
+  .primaryLink {
+    max-width: 100%;
+    padding-inline: 16px;
+    white-space: normal;
+  }
+
+  .heroNote {
+    max-width: 100%;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+  }
+
+  .heroVisual {
+    width: 100%;
+    min-height: 310px;
+  }
+
+  .heroVisualTopline,
+  .heroVisualBottomline {
+    right: 2px;
+    left: 2px;
+    gap: 10px;
+    font-size: 7px;
+    letter-spacing: 0.1em;
+  }
+
+  .visualSheet {
+    width: min(55%, 188px);
+    min-height: 228px;
+    padding: 13px;
+  }
+
+  .visualSheetOne {
+    transform: translate(-24%, 8%) rotate(-8deg);
+  }
+
+  .visualSheetTwo {
+    transform: translate(22%, -3%) rotate(7deg);
+  }
+
+  .heroVisual:hover .visualSheetOne {
+    transform: translate(-27%, 5%) rotate(-11deg);
+  }
+
+  .heroVisual:hover .visualSheetTwo {
+    transform: translate(25%, -6%) rotate(10deg);
+  }
+
+  .visualStamp {
+    right: 2%;
+    bottom: 13%;
+    width: 76px;
+    height: 76px;
+  }
+
+  .heroCapabilities {
+    right: 0;
+    left: 0;
+    gap: 7px 9px;
+    font-size: 7px;
+    letter-spacing: 0.08em;
+  }
+
+  .sectionHeading {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .sectionTitle {
+    max-width: 100%;
+    font-size: clamp(38px, 10.2vw, 46px);
+    overflow-wrap: normal;
+    text-wrap: balance;
+  }
+
+  .sectionIntro,
+  .practiceAside {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .featuredArtwork,
+  .supportingArtwork {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .featuredArtwork {
+    min-height: 285px;
+  }
+
+  .supportingArtwork {
+    min-height: 260px;
+  }
+
+  .featuredMeta,
+  .supportingMeta {
+    gap: 14px;
+    padding-top: 17px;
+  }
+
+  .featuredMeta h3,
+  .supportingMeta h3 {
+    font-size: clamp(29px, 8.5vw, 36px);
+    overflow-wrap: anywhere;
+  }
+
+  .projectEyebrow {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+  }
+
+  .projectDescription {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .projectAction {
+    white-space: normal;
+  }
+
+  .practiceGrid {
+    width: 100%;
+    min-width: 0;
+    gap: 12px;
+  }
+
+  .practiceCard {
+    width: 100%;
+    min-width: 0;
+    min-height: 255px;
+    padding: 20px;
+  }
+
+  .practiceCardBody h3 {
+    font-size: clamp(29px, 8vw, 34px);
+    overflow-wrap: anywhere;
+  }
+
+  .practiceCardBody p {
+    font-size: 14px;
+  }
+
+  .practiceCardBottom {
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 8px;
+    letter-spacing: 0.07em;
+  }
+
+  .practiceCardBottom > span:first-child {
+    flex: 1 1 auto;
+    overflow-wrap: anywhere;
+    line-height: 1.55;
+  }
+
+  .processStep {
+    grid-template-columns: 28px minmax(0, 1fr) 16px;
+    gap: 9px;
+    padding-inline: 2px;
+  }
+
+  .processStep:hover {
+    padding-inline: 7px;
+  }
+
+  .processStepCopy h3 {
+    font-size: 20px;
+    overflow-wrap: anywhere;
+  }
+
+  .processStepCopy p {
+    font-size: 13px;
+  }
+
+  .ctaSection {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 27px;
+    padding: 25px 18px;
+  }
+
+  .ctaGraphic {
+    width: 100%;
+    font-size: clamp(48px, 14vw, 58px);
+    letter-spacing: -0.1em;
+  }
+
+  .ctaGraphic > span:last-of-type {
+    font-size: 0.79em;
+    letter-spacing: -0.09em;
+    white-space: nowrap;
+  }
+
+  .ctaOrbit {
+    width: 170px;
+    max-width: 70vw;
+  }
+
+  .ctaCopy {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .ctaCopy h2 {
+    font-size: clamp(37px, 11vw, 43px);
+    overflow-wrap: anywhere;
+  }
+
+  .ctaCopy > p:not(.eyebrow) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .heroTitle {
+    font-size: 43px;
+  }
+
+  .heroVisual {
+    min-height: 285px;
+  }
+
+  .visualSheet {
+    width: 56%;
+    min-height: 215px;
+  }
+
+  .heroCapabilities {
+    font-size: 6.5px;
+    letter-spacing: 0.06em;
+  }
+
+  .ctaSection {
+    padding-inline: 15px;
+  }
+
+  .ctaGraphic {
+    font-size: 46px;
+  }
+
+  .ctaGraphic > span:last-of-type {
+    font-size: 0.75em;
+  }
+}

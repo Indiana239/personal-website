@@ -23,7 +23,6 @@ export type Project = {
   outcome: string;
 };
 
-// Replace or expand these starter entries with final approved portfolio content.
 // Keep client work anonymised unless you have permission to identify the client.
 export const projects: Project[] = [
   {
@@ -33,42 +32,67 @@ export const projects: Project[] = [
     discipline: "Design",
     year: "2026",
     summary:
-      "A mobile restaurant experience concept that brings discovery, queueing, pre-ordering, and payment into one considered journey.",
-    role: "Product concept, UX flow, and interface design",
-    tools: ["Figma", "FigJam", "Design systems"],
+      "A mobile queueing and pre-order concept that reframes idle waiting as a more purposeful part of the dining experience.",
+    role: "Product concept, exploratory UX research, UX flow, and interface design",
+    tools: ["Figma", "FigJam", "Apple Human Interface Guidelines (iOS reference)"],
     visual: "dineease",
     status: "Self-initiated concept",
     challenge:
-      "Restaurant visits can involve several disconnected steps: finding a place, joining a queue, browsing a menu, and paying. The concept explores how those steps could feel more connected.",
+      "The concept began with the dead time between waiting for a table and waiting for food, alongside the uncertainty of not knowing how long the queue would take.",
     approach: [
-      "Mapped the key customer journey from restaurant discovery to payment.",
-      "Explored navigation and information hierarchy for menu browsing and queue status.",
-      "Developed a consistent visual direction and reusable interface patterns.",
+      "Combined desk research with first-hand experience of restaurant reservations and dining processes.",
+      "Used two exploratory user archetypes to frame different time-conscious dining needs.",
+      "Refined the experience around virtual queueing, pre-ordering, and timely queue updates.",
+      "Reconsidered always-on GPS geofencing in favour of a more privacy-conscious, context-aware check-in direction.",
     ],
     outcome:
-      "A product concept and interface direction designed to communicate the end-to-end experience. Add final prototype links and validated findings when available.",
+      "A focused mobile product concept connecting queue status, pre-ordering, and timely updates. The showcased interface exploration is iOS-focused; Android-specific screens were outside this iteration. Intended benefits have not been validated through usability testing or live operational metrics.",
   },
   {
-    slug: "packaging-concept-studies",
-    title: "Packaging concept studies",
-    category: "Graphic & Packaging Design",
+    slug: "titik-pagi",
+    title: "Titik Pagi",
+    category: "Brand Identity & Packaging Design",
     discipline: "Design",
     year: "2026",
     summary:
-      "A series of visual explorations into brand expression, packaging hierarchy, typography, and production-aware layouts.",
-    role: "Visual direction, layout, and packaging exploration",
-    tools: ["Adobe Illustrator", "Mockup tools"],
+      "A fictional Indonesian specialty coffee brand inspired by the Gayo highlands, expressed through an earthy visual identity and a 250 g stand-up pouch concept.",
+    role: "Brand concept, visual direction, typography, packaging layout, and mockup",
+    tools: ["Adobe Illustrator", "Fraunces", "DM Sans"],
     visual: "packaging",
-    status: "Concept exploration",
+    status: "Self-initiated concept · Fictional brand",
     challenge:
-      "Packaging needs to balance shelf appeal, brand recognition, product information, and the practical constraints of its physical format.",
+      "The packaging needed to balance a clear brand story, coffee origin, tasting notes, and practical product information within a compact 250 g stand-up pouch format.",
     approach: [
-      "Explored visual territories before committing to a final direction.",
-      "Considered typography, hierarchy, and information placement across packaging panels.",
-      "Used dieline-aware thinking to connect the flat artwork with the assembled object.",
+      "Built the brand story around the idea of a thoughtful morning ritual and an imagined connection to the Gayo highlands in Aceh.",
+      "Developed an earthy colour palette using Olive Green (#626A46), Terracotta (#B96849), and Warm Cream (#E9E2D1).",
+      "Combined Fraunces for expressive display typography with DM Sans for clear supporting and product information.",
+      "Used layered mountain contour illustrations as a visual signature, then organised the front and back panels around brand recognition and product information.",
     ],
     outcome:
-      "A developing collection of packaging concepts. Replace this description with the final brief, dieline, and production considerations for each selected project.",
+      "A fictional specialty coffee brand concept and 250 g stand-up pouch packaging exploration. Product details, tasting notes, origin references, and production considerations are illustrative and have not been commercially or production validated.",
+  },
+  {
+    slug: "sela-skin",
+    title: "Sela Skin",
+    category: "Brand Identity & Packaging Design",
+    discipline: "Design",
+    year: "2026",
+    summary:
+      "A fictional contemporary skincare brand built around thoughtful everyday care, expressed through a soft minimalist identity and a 50 g folding carton concept.",
+    role: "Brand concept, visual direction, typography, packaging layout, and mockup",
+    tools: ["Adobe Illustrator", "Instrument Serif", "Manrope"],
+    visual: "packaging",
+    status: "Self-initiated concept · Fictional brand",
+    challenge:
+      "The packaging needed to balance a calm, distinctive brand identity with clear product information across the limited panels of a 50 g reverse tuck end carton.",
+    approach: [
+      "Built the brand story around the meaning of Sela: a pause or a little space between moments, expressed through the tagline “Make Space for Your Skin.”",
+      "Developed a muted palette using Warm Ivory (#F4F1EB), Soft Lilac (#DCD9EA), Mist Blue (#9EBAC7), and Ink Navy (#303947).",
+      "Paired Instrument Serif for the wordmark and expressive brand typography with Manrope for functional product information and supporting text.",
+      "Used abstract water ripples and concentric forms as a graphic signature, then organised the front, back, and side panels around brand recognition and product information.",
+    ],
+    outcome:
+      "A fictional skincare brand concept and 50 g Daily Hydration Cream folding carton exploration. Product descriptions, ingredient areas, directions, and packaging specifications are illustrative and have not been validated as a commercial formulation or production-ready package.",
   },
   {
     slug: "technical-seo-workflow",

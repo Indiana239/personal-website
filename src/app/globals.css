@@ -88,8 +88,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--coral); outline
 }
 .site-header__inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; min-width: 190px; }
-.brand__mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #1a1c18; font-family: var(--font-dm-serif), Georgia, serif; font-size: 22px; letter-spacing: -0.08em; }
-.brand__mark span, .footer-brand span { color: var(--coral); }
+.brand__mark { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #1a1c18; font-family: var(--font-dm-serif), Georgia, serif; font-size: 22px; letter-spacing: -0.08em; line-height: 1; white-space: nowrap; }
+.brand__mark > span, .footer-brand span { color: var(--coral); }
+.brand__mark > span { display: inline; position: static; margin: 0; padding: 0; font: inherit; line-height: inherit; transform: none; }
 .brand__name { font-size: 10px; font-weight: 700; letter-spacing: 0.17em; }
 .desktop-nav { display: flex; align-items: center; gap: clamp(24px, 4vw, 52px); }
 .nav-link { position: relative; padding-block: 8px; color: var(--muted); font-size: 12px; font-weight: 600; transition: color 180ms ease; }
